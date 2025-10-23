@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nozva AI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="/assets/src/web/css/neo.css">
+</head>
+<body class="chat-page-body">
+
+    <header class="header">
+        <a href="#" class="logo">Nozva AI - EllzXn</a>
+        <button id="menu-btn" class="menu-btn">☰</button>
+    </header>
+
+    <nav id="nav-menu" class="nav-menu">
+        <button id="close-btn" class="close-btn">×</button>
+        <a href="#">Nyari apa wok :v</a>
+    </nav>
+
+    <main class="chat-main">
+        <section class="chat-section">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="chat-title-container">
+                        <h1 class="chat-title">Nozva</h1>
+                        <button id="reset-chat-btn" class="reset-chat-btn card"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                    <div class="chat-header-info">
+                        <div id="model-selector" class="model-selector">
+                            <button id="model-selector-btn" class="model-selector-btn card">
+                                <span id="current-model-name">Sky</span> <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div id="model-list" class="model-list card">
+                                <div class="model-item" data-model="sky">Sky</div>
+                                <div class="model-item" data-model="perplexity">Perplexity</div>
+                                <div class="model-item" data-model="pollinations">Pollinations</div>
+                                <div class="model-item" data-model="venice">Venice</div>
+                            </div>
+                        </div>
+                        <div id="realtime-clock" class="realtime-clock-chat"></div>
+                    </div>
+                </div>
+                <div id="chat-window" class="chat-window">
+                </div>
+                    <div class="chat-input-area">
+                    <form id="chat-form" class="chat-form">
+                        <input type="text" id="chat-input" class="chat-input card" placeholder="Tanyakan apa saja..." autocomplete="off">
+                        <button type="submit" class="chat-send-btn card">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="custom-confirm-modal" class="custom-modal-overlay is-hidden">
+        <div class="custom-modal card">
+            <h3>Hapus Riwayat Obrolan?</h3>
+            <p>Apakah Anda yakin ingin menghapus seluruh riwayat obrolan?</p>
+            <div class="modal-buttons">
+                <button id="modal-cancel-btn" class="btn btn-secondary card">Batal</button>
+                <button id="modal-confirm-btn" class="btn btn-primary card">Ya</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/assets/src/web/js/neo.js"></script>
+    <script src="/assets/src/chat/js/chat.js"></script>
+</body>
+</html>
